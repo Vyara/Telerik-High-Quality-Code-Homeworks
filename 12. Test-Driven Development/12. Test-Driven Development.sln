@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Poker", "Poker\Poker.csproj", "{55119D78-3000-45FA-8A35-C811745ECCCC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Poker.Test", "Poker.Test\Poker.Test.csproj", "{9AC0A9F2-1A2A-409D-923D-AD15C4F176BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Validator", "Validator\Validator.csproj", "{370C8300-83AB-4C7E-ABCF-2341BAF7465B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{55119D78-3000-45FA-8A35-C811745ECCCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55119D78-3000-45FA-8A35-C811745ECCCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55119D78-3000-45FA-8A35-C811745ECCCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55119D78-3000-45FA-8A35-C811745ECCCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AC0A9F2-1A2A-409D-923D-AD15C4F176BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AC0A9F2-1A2A-409D-923D-AD15C4F176BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AC0A9F2-1A2A-409D-923D-AD15C4F176BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AC0A9F2-1A2A-409D-923D-AD15C4F176BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{370C8300-83AB-4C7E-ABCF-2341BAF7465B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{370C8300-83AB-4C7E-ABCF-2341BAF7465B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{370C8300-83AB-4C7E-ABCF-2341BAF7465B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{370C8300-83AB-4C7E-ABCF-2341BAF7465B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
