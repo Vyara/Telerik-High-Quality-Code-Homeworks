@@ -7,7 +7,7 @@
         private const int MinSize = 1;
         private const int MaxSize = 100;
         private int size;
-        private int[,] matrixtemplate;
+        private readonly int[,] matrixtemplate;
 
         public Matrix(int size)
         {
