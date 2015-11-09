@@ -2,7 +2,7 @@
 {
     using System;
 
-    public static class RotatingWalkUtils
+    public static class MatrixUtilities
     {
         private const int NumberOfDirections = 8;
         private static readonly int[] ChangeInRow = { 1, 1, 1, 0, -1, -1, -1, 0 };
@@ -41,8 +41,8 @@
 
         public static bool NeighbouringCellsAreVisited(this int[,] matrix, int matrixRow, int matrixCol)
         {
-            var matrixRowsCount = matrix.GetLength(0);
-            var matrixColCount = matrix.GetLength(1);
+            int matrixRowsCount = matrix.GetLength(0);
+            int matrixColCount = matrix.GetLength(1);
 
             int upperRow = UpdateUpperOrLeftPosition(matrixRow);
             int lowerRow = UpdateLowerOrRightPosition(matrixRow, matrixRowsCount);
@@ -65,8 +65,8 @@
 
         public static Coordinates GetStartingPosition(this int[,] matrix)
         {
-            var matrixRowsCount = matrix.GetLength(0);
-            var matrixColCount = matrix.GetLength(1);
+            int matrixRowsCount = matrix.GetLength(0);
+            int matrixColCount = matrix.GetLength(1);
 
             for (int row = 0; row < matrixRowsCount; row++)
             {
@@ -101,7 +101,7 @@
         {
             for (int i = 0; i < NumberOfDirections; i++)
             {
-                RotationDirection currentDirection = (RotationDirection)(((int)direction + i) % NumberOfDirections);
+                var currentDirection = (RotationDirection)(((int)direction + i) % NumberOfDirections);
                 int currentRow = row + GetChangeInRow(currentDirection);
                 int currentCol = col + GetChangeInCol(currentDirection);
                 if (matrix.IsValidNextDirection(currentRow, currentCol))
@@ -125,7 +125,7 @@
 
         private static bool IsInRange(this int[,] matrix, int row, int col)
         {
-            var matrixRowsCount = matrix.GetLength(0);
+            int matrixRowsCount = matrix.GetLength(0);
             var matrixColCount = matrix.GetLength(1);
 
             bool rowIsInRange = row >= 0 && row < matrixRowsCount;

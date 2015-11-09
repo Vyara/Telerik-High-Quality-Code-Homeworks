@@ -24,7 +24,7 @@
 
             private set
             {
-                Validator.NumberValidator.CheckIfNumberIsInRange(value, MinSize, MaxSize, string.Format("Matrix size should be in range [{0}; {1}]", MinSize, MaxSize));
+                Validator.NumberValidator.CheckIfNumberIsInRange(value, MinSize, MaxSize, string.Format(format: "Matrix size should be in range [{0}; {1}]", arg0: MinSize, arg1: MaxSize));
 
                 this.size = value;
             }
@@ -42,8 +42,8 @@
         {
             Coordinates position = this.matrixtemplate.GetStartingPosition();
             RotationDirection direction = RotationDirection.DownAndRight;
-            int rowChange = RotatingWalkUtils.GetChangeInRow(direction);
-            int colChange = RotatingWalkUtils.GetChangeInCol(direction);
+            int rowChange = MatrixUtilities.GetChangeInRow(direction);
+            int colChange = MatrixUtilities.GetChangeInCol(direction);
             int cellValue = 1;
 
             while (cellValue <= this.Size * this.Size)
@@ -71,8 +71,8 @@
                         direction = this.matrixtemplate.GetNextDirection(direction, position.Row, position.Col);
                     }
 
-                    rowChange = RotatingWalkUtils.GetChangeInRow(direction);
-                    colChange = RotatingWalkUtils.GetChangeInCol(direction);
+                    rowChange = MatrixUtilities.GetChangeInRow(direction);
+                    colChange = MatrixUtilities.GetChangeInCol(direction);
 
                     if (neighboursAreFilled)
                     {
@@ -88,13 +88,13 @@
 
         public override string ToString()
         {
-            StringBuilder result = new StringBuilder();
+            var result = new StringBuilder();
 
             for (int row = 0; row < this.matrixtemplate.GetLength(0); row++)
             {
                 for (int col = 0; col < this.matrixtemplate.GetLength(1); col++)
                 {
-                    result.AppendFormat("{0, -5}", this.matrixtemplate[row, col]);
+                    result.AppendFormat(format: "{0, -5}", arg0: this.matrixtemplate[row, col]);
                 }
 
                 result.AppendLine();
